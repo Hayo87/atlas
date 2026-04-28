@@ -1,2 +1,1 @@
-directional correctness
-not exact prediction
+
