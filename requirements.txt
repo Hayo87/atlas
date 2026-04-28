@@ -6,3 +6,5 @@ keplergl
 scikit-learn
 geopy
 rich
+matplotlib
+leafmap 
