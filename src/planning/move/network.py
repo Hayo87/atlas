@@ -27,4 +27,14 @@ def load_network():
 def enrich_network(G):
     G = ox.add_edge_speeds(G)
     G = ox.add_edge_travel_times(G)
+
+    # Add elevation from DEM
+    cache_dir = Path("cache")
+    dem_path = cache_dir / "dem_bbox.tif"
+
+    G = ox.elevation.add_node_elevations_raster(G, dem_path)
+
+    # Compute slope
+    G = ox.elevation.add_edge_grades(G)
+
     return G

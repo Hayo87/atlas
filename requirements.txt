@@ -8,3 +8,4 @@ geopy
 rich
 matplotlib
 leafmap 
+rasterio
